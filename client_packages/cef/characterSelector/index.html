@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Character Selector | InnoRP</title>
+</head>
+<body onload="loadPage()">
+    <span id="backgr"></span>
+    <div id="account-panel">
+        <img draggable="false" src="./img/DP.svg" id="DPlogo">
+        <span id="DPcount">{{ donate }}DP</span>
+    </div>
+    <div id="character_list">
+        <div id="characters"></div>
+        
+        <div id="character_nul">
+            <img draggable="false" src="./img/add-user.svg" class="adduser_img">
+        </div>
+    </div>
+
+    <div id="applyBtn">
+        Подтвердить
+    </div>
+    
+</body>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/script.js"></script>
+</html>

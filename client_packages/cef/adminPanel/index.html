@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Admin Panel | InnovationRP</title>
+</head>
+<body>
+    <div id="allfr">
+        <div id="frame">
+            <div id="topmenu">
+                <span class="upmenubutton" id="playersTab">Players</span>
+                <span class="upmenubutton" id="accountsTab">Accounts</span>
+                <span class="upmenubutton" id="reportsTab">Reports</span>
+                <span class="upmenubutton" id="factionTab">Faction</span>
+                <span class="upmenubutton" id="banlistTab">Banlist</span>
+                <span class="upmenubutton" id="vehiclesTab">Vehicles</span>
+                <span class="upmenubutton" id="logsTab">Logs</span>
+                <span class="upmenubutton" id="adminsTab">Admins</span>
+                <span class="upmenubutton" id="settingsTab">Settings</span>
+            </div>
+            <div id="tabPlayers">
+                <div id="searchplayerwindow">
+                    <input type="text" id="searchplayer" placeholder="Поиск...">
+                    <div id="playerRadio">
+                        <input type="radio" id="playerChoice1"  name="playercat" value="id" checked="checked">
+                        <label for="contactChoice1">ID</label>
+                        <input type="radio" id="contactChoice2" name="playercat" value="nickname">
+                        <label for="contactChoice2">Nickname</label>
+                        <input type="radio" id="contactChoice3" name="playercat" value="login">
+                        <label for="contactChoice3">Login</label>
+                        <input type="radio" id="contactChoice4" name="playercat" value="pid">
+                        <label for="contactChoice3">PID</label>
+                    </div>
+                    <!--<select class="showedlist" id="selectvaluePlayers">
+                        <option class="showedlist-item" value="id">ID</option>
+                        <option class="showedlist-item" value="nickname">Nickname</option>
+                        <option class="showedlist-item" value="login">Login</option>
+                        <option class="showedlist-item" value="pid">PID</option>
+                    </select>-->
+                    <div id="playerslist">
+                        <div id="hatPlayersTable">
+                            <span>nickname</span>
+                            <span>login</span>
+                            <span>playerID</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="playerInfo">
+                    <div id="playerOsnStats">
+                        <span>Онлайн: <span id="isOnline"></span></span>
+                        <span>Персонаж: <span id="charInfo"></span></span>
+                        <span>Уровень: <span id="charLvl"></span></span>
+                        <span>Отыграно: <span id="playHour"></span> ч</span>
+                        <span>Телефон: <span></span></span>
+                        <span>Варны: <span id="warnAct"></span> (Всего: <span id="allWarns"></span>)</span>
+                        <span>Бан: <span></span></span>
+                        <span>Логин: <span id="charLogin"></span> (Social: <span id="playerSocialClub"></span>)</span>
+                    </div>
+                    <div id="playerSecondStats">
+                        <span>Фишки: <span></span></span>
+                        <span>Деньги: <span id="playerMoney"></span>$</span>
+                        <span>Банк: <span id="playerBank"></span>$</span>
+                        <span>Фракция: <span></span></span>
+                        <span>Дом: <span></span></span>
+                        <span>Бизнес: <span></span></span>
+                    </div>
+                    <div id="buttonsTP">
+                        TP
+                        <span class="userButton" id="tpToPlayer">К игроку</span>
+                        <span class="userButton" id="tpGetHerePlayer">К себе</span>
+                        <span class="userButton" id="rePlayer">Слежка</span>
+                        <span class="userButton" id="slapPlayer">Slap</span>
+                        <span class="userButton" id="tpPlayerDimZero">Dim 0</span>
+                    </div>
+                    <div id="buttonsMain">
+                        Main
+                        <span class="userButton" id="setHPPlayer">HP</span>
+                        <span class="userButton" id="setArmorPlayer">Armor</span>
+                        <span class="userButton" id="setSkinPlayer">Skin</span>
+                        <span class="userButton">History</span>
+                    </div>
+                    <div id="buttonsImuch">
+                        <span id="buttonsImuch_l">Имущество</span>
+                        <span class="userButton" id="givePlayerMoney">Деньги</span>
+                        <span class="userButton" id="giveOwnVeh">Машина</span>
+                    </div>
+                    <div id="buttonsMakes">
+                        <span id="buttonsMakes_l">Действия</span>
+                        <span class="userButton" id="setPlayerFraction">Set Faction</span>
+                        <span class="userButton" id="makePlayerAdmin">Set Admin</span>
+                    </div>
+                    <input type="text" id="pmPlayer" placeholder="Сообщение игроку...">
+                    <span id="pmPlayerSend">Send</span>
+
+                    <div id="buttonsNakaz">
+                        <span class="userButton" id="mutePlayer">Mute</span>
+                        <span class="flexspace"></span>
+                        <span class="userButton" id="kickPlayer">Kick</span>
+                        <span class="flexspace"></span>
+                        <span class="userButton" id="jailPlayer">Jail</span>
+                        <span class="flexspace"></span>
+                        <span class="userButton" id="warnPlayer">Warn</span>
+                        <span class="flexspace"></span>
+                        <span class="userButton" id="banPlayer">Ban</span>
+                        <span class="flexspace"></span>
+                        <span class="userButton" id="hardBan">HardBan</span>
+                    </div>
+                    <div id="buttonsUnNakaz">
+                        <span class="userButton" id="unMutePlayer">Unmute</span>
+                        <span class="flexspace"></span>
+                        <span class="userButton" id="unJailPlayer">Unjail</span>
+                        <span class="flexspace"></span>
+                        <span class="userButton" id="unWarnPlayer">Unwarn</span>
+                        <span class="flexspace"></span>
+                        <span class="userButton" id="unBanPlayer">Unban</span>
+                    </div>
+                </div>
+            </div>
+            <div id="tabAccounts">
+                <input type="text" id="searchaccounts" placeholder="Поиск...">
+                <div id="accountRadio">
+                    <input type="radio" id="accountChoice1"  name="accountcat" value="login" checked="checked">
+                    <label for="accountChoice1">Login</label>
+                    <input type="radio" id="accountChoice2" name="accountcat" value="socialclub">
+                    <label for="accountChoice2">SocialClub</label>
+                </div>
+                <!--<select class="showedlistAccounts" id="selectvalueAccounts">
+                    <option class="showedlist-item">Login</option>
+                    <option class="showedlist-item">SocialClub</option>
+                </select>-->
+                <div id="accountInfo">
+                    <div id="accountOsnStats">
+                        <span>Логин: <span></span></span>
+                        <span>SocialClub: <span></span></span>
+                        <span>Заблокирован: <span></span></span>
+                        <br>
+                        <span>Персонаж 1: <span></span></span>
+                        <span>Персонаж 2: <span></span></span>
+                        <span>Персонаж 3: <span></span></span>
+                        <br>
+                        <span>Donate: <span></span> DP</span>
+                    </div>
+                    <div id="accountDopStats">
+                        <span>  REG DATE: <span></span></span>
+                        <span>LAST DATE: <span></span></span>
+                        <br>
+                        <span>  REG IP: <span></span></span>
+                        <span>LAST IP: <span></span></span>
+                    </div>
+                    <div id="accountMain">
+                        Main
+                        <span class="userButton2">Сменить SocialClub</span>
+                        <span class="userButton2">Сменить пароль</span>
+                    </div>
+                    <div id="accountNakaz">
+                        Наказания
+                        <span class="userButton">Ban</span>
+                        <span class="userButton">Unban</span>
+                    </div>
+                    <div id="accountImu">
+                        Имущество
+                        <span class="userButton">Донат</span>
+                    </div>
+                </div>
+            </div>
+            <div id="tabReports">
+                <span class="development">В разработке...</span>
+            </div>
+            <div id="tabFaction">
+                <span class="development">В разработке...</span>
+            </div>
+            <div id="tabBanlist">
+                <span class="development">В разработке...</span>
+            </div>
+            <div id="tabVehicles">
+                <span id="adminVehList_Label">Админские автомобили</span>
+                <div id="adminVehList_Box">
+                    <span id="adminVehList_Box_Head_ID">ID</span>
+                    <span id="adminVehList_Box_Head_Model">Model</span>
+                    <span id="adminVehList_Box_Head_Aname">Admin Name</span>
+                    <div id="adminVehList_Box_Data">
+                    </div>
+
+                </div>
+                <div id="adminVehList_ManageBtn_Refresh">Обновить</div>
+                <div id="adminVehList_ManageBtn_Delete">Удалить</div>
+                <div id="adminVehList_ManageBtn_DeleteAll">Удалить все</div>
+
+                <span id="spawnAdminVeh_Label">Спавн автомобилей</span>
+
+                <div class="defaDLC_Btns" id="spawnAdminVeh_Default_Btn">Стандартные</div>
+                <div class="defaDLC_Btns" id="spawnAdminVeh_DLC_Btn">DLC</div>
+
+                <div id="spawnAdminVeh_Default">
+                    <div id="spawnAdminVeh_Default_Categ">
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Boats">Boats</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Commercials">Commercials</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Compacts">Compacts</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Coupes">Coupes</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Cycles">Cycles</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Emergency">Emergency</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Helicopters">Helicopters</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Industrial">Industrial</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Military">Military</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Motorcycles">Motorcycles</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Muscle">Muscle</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_OffRoad">Off-Road</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_OpenWheel">Open Wheel</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Planes">Planes</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_SUVs">SUVs</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Sedans">Sedans</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Service">Service</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Sports">Sports</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_SportsClassic">Sports Classic</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Super">Super</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Utility">Utility</div>
+                        <div class="spawnAdminVeh_Categ_Btn" id="spawnAdminVeh_Vans">Vans</div>
+                    </div>
+                    <div class="spawnAdminVeh_Default_Categ_DataPos" id="spawnAdminVeh_Default_Categ_Boats">
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_dinghy">dinghy</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_dinghy2">dinghy2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_dinghy3">dinghy3</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_dinghy4">dinghy4</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_jetmax">jetmax</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_marquis">marquis</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_seashark">seashark</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_seashark2">seashark2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_seashark3">seashark3</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_speeder">speeder</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_speeder2">speeder2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_squalo">squalo</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_submersible">submersible</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_submersible2">submersible2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_suntrap">suntrap</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_toro">toro</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_toro2">toro2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_tropic">tropic</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_tropic2">tropic2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_tug">tug</div>
+                    </div>
+                    <div class="spawnAdminVeh_Default_Categ_DataPos" id="spawnAdminVeh_Default_Categ_Commercials">
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_benson">benson</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_biff">biff</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_cerberus">cerberus</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_cerberus2">cerberus2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_cerberus3">cerberus3</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_hauler">hauler</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_hauler2">hauler2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_mule">mule</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_mule2">mule2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_mule3">mule3</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_mule4">mule4</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_packer">packer</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_phantom">phantom</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_phantom2">phantom2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_phantom3">phantom3</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_pounder">pounder</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_pounder2">pounder2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_stockade">stockade</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_stockade3">stockade3</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_terbyte">terbyte</div>
+                    </div>
+                    <div class="spawnAdminVeh_Default_Categ_DataPos" id="spawnAdminVeh_Default_Categ_Compacts">
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_asbo">asbo</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_blista">blista</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_brioso">brioso</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_club">club</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_dilettante">dilettante</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_dilettante2">dilettante2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_kanjo">kanjo</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_issi2">issi2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_issi3">issi3</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_issi4">issi4</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_issi5">issi5</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_issi6">issi6</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_panto">panto</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_prairie">prairie</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_rhapsody">rhapsody</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_brioso2">brioso2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_weevil">weevil</div>
+                    </div>
+                    <div class="spawnAdminVeh_Default_Categ_DataPos" id="spawnAdminVeh_Default_Categ_Coupes">
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_cogcabrio">cogcabrio</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_exemplar">exemplar</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_f620">f620</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_felon">felon</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_felon2">felon2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_jackal">jackal</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_oracle">oracle</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_oracle2">oracle2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_sentinel">sentinel</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_sentinel2">sentinel2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_windsor">windsor</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_windsor2">windsor2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_zion">zion</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_zion2">zion2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_previon">previon</div>
+                    </div>
+                    <div class="spawnAdminVeh_Default_Categ_DataPos" id="spawnAdminVeh_Default_Categ_Cycles">
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_bmx">bmx</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_cruiser">cruiser</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_fixter">fixter</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_scorcher">scorcher</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_tribike">tribike</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_tribike2">tribike2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_tribike3">tribike3</div>
+                    </div>
+                    <div class="spawnAdminVeh_Default_Categ_DataPos" id="spawnAdminVeh_Default_Categ_Emergency">
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_ambulance">ambulance</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_fbi">fbi</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_fbi2">fbi2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_firetruk">firetruk</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_lguard">lguard</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_pbus">pbus</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_police">police</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_police2">police2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_police3">police3</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_police4">police4</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_policeb">policeb</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_polmav">polmav</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_policeold1">policeold1</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_policeold2">policeold2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_policet">policet</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_pranger">pranger</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_predator">predator</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_riot">riot</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_riot2">riot2</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_sheriff">sheriff</div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_sheriff2">sheriff2</div>
+                    </div>
+                    <!--<div class="spawnAdminVeh_Default_Categ_DataPos" id="spawnAdminVeh_Default_Categ_Helicopters">
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                        <div class="spawnAdminVeh_VehBtn" id="spawnAdminVeh_Veh_"></div>
+                    </div>-->
+                </div>
+
+                <div id="spawnAdminVehInsert_Box">
+                    <div id="spawnAdminVehInsert_Back">
+                        <input type="text" id="spawnAdminVehInsert_Input" placeholder="Model Name">
+                    </div>
+                    <div id="spawnAdminVehInsert_Save">Spawn</div>
+                </div>
+                
+            </div>
+            <div id="tabLogs">
+                <span class="development">В разработке...</span>
+            </div>
+            <div id="tabAdmins">
+                <span class="development">В разработке...</span>
+            </div>
+            <div id="tabSettings">
+                <div id="showAuthBox">
+                    <input type="checkbox" name="showAuth" id="showAuthInChat">
+                    <span id="showAuthInChat_label">Отображать в чате авторизации игроков</span>
+                </div>
+                
+                <div id="hideRedTagBox">
+                    <input type="checkbox" name="hideTag" id="hideRedTag">
+                    <span id="hideRedTag_label">Скрыть красный тег</span>
+                </div>
+
+                <div id="customRedTagBox">
+                    <span id="customRedTag_label">Кастомный тег</span>
+                    <input type="checkbox" name="enableCustomTag" id="enableCustomTag">
+                    <input type="text" id="customRedTag" placeholder="Тег...">
+                </div>
+
+                <span class="userButton2" id="saveButton">Save settings</span>
+                <span class="userButton" id="logOutButton">Log Out</span>
+            </div>
+        </div>
+        <div id="regWindow">
+            <span id="regLabel">Регистрация</span>
+            <input type="password" id="apassReg" placeholder="Пароль">
+            <span id="regNote">* Пароль сохраняется до снятия админки</span>
+            <span class="userButton" id="regButton">Регистрация</span>
+        </div>
+        <div id="authWindow">
+            <span id="authLabel">Авторизация</span>
+            <input type="password" id="apass" placeholder="Пароль">
+            <span class="userButton" id="authButton">Войти</span>
+        </div>
+        <div id="acceptWindow">
+            <span id="acceptLabel">Подтверждение</span>
+            <span id="acceptNote">Вы уверены, что хотите <span id="acceptNoteText"></span>?</span>
+            <span class="userButton" id="acceptButtonNo">Отмена</span>
+            <span class="userButton" id="acceptButtonYes">Подтвердить</span>
+        </div>
+        <div id="acceptWindow1">
+            <span id="acceptLabel">Подтверждение</span>
+            <span id="acceptNote1">Вы уверены, что хотите <span id="acceptNoteText1"></span>?</span>
+            <input type="text" id="accept1text" placeholder="">
+            <span class="userButton" id="acceptButton1No">Отмена</span>
+            <span class="userButton" id="acceptButton1Yes">Подтвердить</span>
+        </div>
+        <div id="acceptWindow2">
+            <span id="acceptLabel">Подтверждение</span>
+            <span id="acceptNote2">Вы уверены, что хотите <span id="acceptNoteText2"></span>?</span>
+            <input type="text" id="accept2text1" placeholder="">
+            <input type="text" id="accept2text2" placeholder="">
+            <span class="userButton" id="acceptButton2No">Отмена</span>
+            <span class="userButton" id="acceptButton2Yes">Подтвердить</span>
+        </div>
+    </div>
+</body>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/script.js"></script>
+</html>

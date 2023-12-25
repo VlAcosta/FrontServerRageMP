@@ -1,0 +1,405 @@
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Thin.ttf") format("truetype");
+    font-weight: 100; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-ExtraLight.ttf") format("truetype");
+    font-weight: 200; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+    font-weight: 300; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: 400; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+    font-weight: 500; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+    font-weight: 600; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+    font-weight: 800; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Black.ttf") format("truetype");
+    font-weight: 900; 
+}
+
+@font-face {
+    font-family: "Gilroy"; 
+    src: url("../fonts/Gilroy-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Gilroy"; 
+    src: url("../fonts/Gilroy-Semibold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Gilroy"; 
+    src: url("../fonts/Gilroy-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+body{
+    /*background: url("../img/bckg.png");*/
+}
+
+*{
+    user-select: none;
+    overflow: hidden;
+}
+
+span {
+    overflow: visible;
+}
+
+#mainbckg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+#mainBlock{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/bckg1.svg");
+    background-size: cover;
+    /*background: radial-gradient(50% 50% at 50% 50%, rgba(9, 9, 12, 0.88) 0%, #050712 100%);*/
+    
+}
+
+.asd{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+
+#choseTab{
+    position: absolute;
+    width: 820px;
+    height: 36px;
+    overflow: visible;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 20px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+}
+
+.invisible{
+    display: none;
+}
+
+#regWindow{
+    position: absolute;
+    width: 611px;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+}
+
+.labelWindowGroup{
+    width: 611px;
+    height: 61px;
+    display: flex;
+    flex-direction: column;
+}
+
+.labelWindowGroup_top{
+    width: 611px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inputBox{
+    width: 329px;
+    height: 81px;
+
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    margin-top: 25px;
+
+    overflow: visible;
+}
+
+.mainLabel{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+}
+
+.secLabel{
+    width: 148px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.inputBox_label{
+    position: relative;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    top: 10px;
+    left: 28px;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.inputbox_quad{
+    position: relative;
+    width: 6px;
+    height: 6px;
+    top: -10px;
+    left: -4px;
+
+    background-color: white;
+    box-shadow: 0px 0px 17px #FFFFFF;
+}
+
+#reg_lines{
+    position: absolute;
+    left: 100px;
+    top: 98px;
+}
+
+.inputBox_text{
+    position: relative;
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+
+    height: 21px;
+    width: 260px;
+    top: 15px;
+    left: 26px;
+
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+}
+
+#savePass{
+    display: flex;
+    flex-direction: row;
+    width: 272px;
+    height: 35px;
+    overflow: visible;
+    justify-content: left;
+    margin-left: 141px;
+    margin-top: 30px;
+}
+
+#savePass_text{
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    overflow: visible;
+    color: #FFFFFF;
+
+}
+
+#savePass_sectext{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: rgba(255, 255, 255, 0.25);
+}
+
+#savePass_box{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    box-sizing: border-box;
+    border-radius: 3px;
+    overflow: visible;
+    margin-right: 8px;
+}
+
+.finalButton{
+    position: relative;
+    width: 329px;
+    height: 61px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #C7C7C7 100%);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    box-sizing: border-box;
+    box-shadow: 0px 31px 34px -25px rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    color: #303030;
+
+    cursor: pointer;
+    z-index: 10;
+}
+
+#errorBlock{
+    position: fixed;
+    width: 310px;
+    height: 150px;
+
+    bottom: 0px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+
+    transition: all ease .5s;
+    z-index: 0;
+}
+
+#error_img{
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: .05;
+}
+
+#error_header{
+    position: absolute;
+    top: 54px;
+
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #ED4343;
+}
+
+#error_text{
+    position: absolute;
+    top: 80px;
+
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+#logWindow{
+    position: absolute;
+    width: 611px;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+}
+
+#log_lines{
+    position: absolute;
+    left: 100px;
+    top: 98px;
+}
+
+#passw_lines{
+    position: absolute;
+    left: 100px;
+    top: 98px;
+}
+
+#passwWindow{
+    position: absolute;
+    width: 611px;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+}

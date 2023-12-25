@@ -1,0 +1,1577 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@600&display=swap');
+
+@font-face {
+    font-family: "Rubik"; 
+    src: url("../fonts/Rubik.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Thin.ttf") format("truetype");
+    font-weight: 100; 
+}
+
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-ExtraLight.ttf") format("truetype");
+    font-weight: 200; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+    font-weight: 300; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: 400; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+    font-weight: 500; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+    font-weight: 600; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+    font-weight: 800; 
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat-Black.ttf") format("truetype");
+    font-weight: 900; 
+}
+
+*{
+    user-select: none;
+    overflow: hidden;
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 1.5s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner .7s infinite ease-in;
+  }
+
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+0% { height: 0%;}
+25% { height: 0%;}
+50% { height: 100%;}
+75% { height: 100%;}
+100% { height: 0%;}
+}
+
+#entryservclose_dev{
+    position: absolute;
+    width: 762px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#logo{
+    position: fixed;
+    width: 155px;
+    height: 98px;
+    right: 54px;
+    top: 12px;
+
+}
+
+#plidlogo{
+    position: fixed;
+    width: 18px;
+    height: 18px;
+    top: 120px;
+    right: 158px;
+}
+
+#plidnum{
+    position: fixed;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    width: 34px;
+    height: 18px;
+    top: 120px;
+    right: 120px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#plcountlogo{
+    position: fixed;
+    width: 12px;
+    height: 21.5px;
+    right: 98px;
+    top: 121px;
+}
+
+#plcountnum{
+    position: fixed;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    width: 34px;
+    height: 16px;
+    top: 119px;
+    right: 60px;
+    text-align: left;
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+}
+
+#moneybox{
+    position: fixed;
+    top: 155px;
+    right: 53px;
+    display: flex;
+    flex-direction: row;
+}
+
+#moneylogo{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+#moneycount{
+    height: 35px;
+    
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 31px;
+    
+    color: #FFFFFF;
+}
+
+
+#greenzone_label{
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+
+    left: 16.4%;
+    bottom: calc(2.22% + 71px);
+}
+
+#greenzone_img_bckg{
+    width: 33px;
+    height: 33px;
+
+    background: rgba(41, 41, 41, 0.8);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#greenzone_img{
+    width: 18px;
+}
+
+#greenzone_text{
+    margin-left: 7px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 33px;
+    display: flex;
+    justify-content: center;
+    /* identical to box height */
+    
+    letter-spacing: 0.05em;
+    
+    color: #FFFFFF;
+}
+
+#pos_micro{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    bottom: 2.22%;
+    left: 16.4%;
+}
+
+#player_pos_background{
+    width: 232px;
+    height: 57px;
+    background: url('../img/plpos_background.svg');
+    display: flex;
+    flex-direction: row;
+}
+
+#player_pos_navimg{
+    margin-left: 12px;
+    min-width: 35px;
+    max-width: 35px;
+}
+
+#player_pos_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+#player_pos_neighborhood, #player_pos_place{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 600;
+    /* identical to box height */
+    
+    letter-spacing: 0.05em;
+}
+
+#player_pos_neighborhood{
+    font-size: 14px;
+    line-height: 16px;
+    color: #F8D800;
+    width: 298px;
+    max-height: 16px;
+}
+
+#player_pos_place{
+    font-size: 13px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 4px;
+}
+
+#micro_background{
+    margin-top: 4px;
+    margin-left: -15px;
+    width: 49px;
+    height: 49px;
+    border-radius: 2000px;
+    background: rgba(41, 41, 41, 0.8);
+    display: flex;
+    justify-content: center;
+}
+
+#micro{
+    width: 21px;
+    opacity: 0.9;
+    filter: contrast(0);
+}
+
+.notifybox{
+    width: 100%;
+    min-height: 57px;
+
+    background: rgba(41, 41, 41, 0.8);
+    border-radius: 15px;
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    align-items: center;
+    transition: ease all 1s;
+    
+    
+    color: #FFFFFF;
+}
+
+.notify_img{
+    margin-right: 10px;
+}
+
+.notifytext{
+    max-width: 70%;
+    text-align: left;
+}
+
+#notify_cont{
+    position: absolute;
+    height: 40%;
+    width: 380px;
+    bottom: 23px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-5%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media  (min-width: 1466px) {
+
+    #notify_cont{
+        width: 450px;
+        transform: translateX(-20%);
+    }
+
+    @media  (min-width: 1595px) {
+
+        #notify_cont{
+            width: 450px;
+            transform: translateX(-30%);
+        }
+    
+        @media  (min-width: 1733px) {
+    
+            #notify_cont{
+                width: 450px;
+                transform: translateX(-40%);
+            }
+        
+            @media  (min-width: 1870px) {
+                #notify_cont{
+                    width: 450px;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+
+#datesblock{
+    position: absolute;
+    width: 130px;
+    height: 75px;
+    left: 1.56%;
+    bottom: 21.20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#calendar{
+    width: 20px;
+    height: 23px;
+    margin-top: 11px;
+}
+
+#date{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    margin-left: 9px;
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+#clock{
+    width: 23px;
+}
+
+#time{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    width: 100px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-left: 7px;
+}
+
+
+#speedometer{
+    position: fixed;
+    right: 15px;
+    bottom: 7px;
+    width: 311px;
+    height: 356px;
+}
+
+.speedstyle{
+    position: absolute;
+    width: 138px;
+    height: 73px;
+    top: 93px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 79px;
+    line-height: 93px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#speedlabel{
+    position: absolute;
+    width: 47px;
+    height: 15px;
+    left: 181px;
+    top: 166px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#rpmbox {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 0;
+    top: 0;
+
+    background: url(../img/rpm_box.svg);
+}
+
+#rpmc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 311px;
+    height: 311px;
+    clip-path: url(#clipping);
+}
+
+#rpm {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    background: url(../img/rpm_color.png);
+}
+
+.osnspeed{
+    color: rgba(255, 255, 255, 1);
+}
+
+#turn-left, #turn-right{
+    width: 21px;
+    height: 24px;
+    transition: .5s;
+}
+
+#vehstatepanel{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 207px;
+    height: 33px;
+    bottom: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+}
+
+#turns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 62px;
+    height: 24px;
+}
+
+#turn-left{
+    transform: rotate(180deg);
+}
+
+
+#fuelbox {
+    position: absolute;
+    width: 60px;
+    height: 18px;
+    top: 225px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 18px;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+
+#engine{
+    width: 34px;
+}
+
+#door{
+    width: 27px;
+}
+
+#belt{
+    width: 32px;
+}
+
+#odometer{
+    position: absolute;
+    width: 129px;
+    height: 22px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    top: 192px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+#odometernul{
+    font-size: 26px;
+    font-weight: 900;
+}
+
+#odometernum{
+    font-size: 26px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 900;
+    
+}
+
+#odometerlabel{
+    position: absolute;
+    top: 0px;
+    left: 106px;
+}
+
+
+/*Меню фракции*/
+
+#factionmenu{
+    position: absolute;
+    width: 1400px;
+    height: 672px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#factionmenu-list{
+    position: absolute;
+    width: 319px;
+    height: 188px;
+    left: 0;
+    top: 0;
+    
+    background: rgba(57, 65, 77, 0.99);
+    box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+#factionmenulist_label{
+    position: absolute;
+    
+    height: 32px;
+    top: 13px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+    
+    color: #FFFFFF;
+}
+
+.factionmenulist_clicked{
+    position: absolute;
+    width: 315px;
+    height: 42px;
+    z-index: 3;
+}
+
+#factionmenulist_clicked_members{
+    top: 46px;
+}
+
+#factionmenulist_clicked_manage{
+    top: 90px;
+}
+
+#factionmenulist_clicked_settings{
+    top: 134px;
+}
+
+.factionmenulist_selectedline{
+    position: absolute;
+    width: 33px;
+    height: 11px;
+    left: -10px;
+    
+    background: radial-gradient(59.09% 59.09% at 50% 90.91%, #ED9818 0%, rgba(235, 149, 21, 0) 100%);
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+#factionmenulist_selectedline_members{
+    top: 61px;
+}
+#factionmenulist_selectedline_manage{
+    top: 106px;
+}
+#factionmenulist_selectedline_settings{
+    top: 150px;
+}
+
+#factionmenulist_line1{
+    position: absolute;
+    width: 281px;
+    height: 2px;
+    top: 44px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    
+    background: radial-gradient(50% 772254.51% at 50.18% 50.02%, #C4C4C4 0%, rgba(196, 196, 196, 0) 100%);
+    border-radius: 143px;
+}
+
+#factionmenulist_line2{
+    top: 88px;
+}
+
+#factionmenulist_line3{
+    top: 132px;
+}
+
+.factionmenulist_line{
+    position: absolute;
+    width: 249px;
+    height: 2px;
+    left: 0;
+    
+    
+    background: linear-gradient(90deg, rgba(196, 196, 196, 0) 0%, rgba(196, 196, 196, 0.21) 18.23%, rgba(196, 196, 196, 0) 100%);
+    border-radius: 143px;
+}
+
+#factionmenulist_members{
+    top: 56px;
+}
+
+#factionmenulist_manage{
+    top: 99px;
+}
+
+#factionmenulist_settings{
+    top: 143px;
+}
+
+.factionmenulist_button{
+    position: absolute;
+    width: 141px;
+    height: 21px;
+    left: 27px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+    
+    color: #FFFFFF;
+}
+
+#factionmenu-main{
+    position: absolute;
+    width: 1068px;
+    height: 672px;
+    right: 0;
+    top: 0;
+    
+    background: rgba(57, 65, 77, 0.99);
+    box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+#factionmenu_members_searchbackground{
+    position: absolute;
+    width: 258px;
+    height: 33px;
+    left: 18px;
+    top: 17px;
+    background: rgba(29, 29, 29, 0.37);
+}
+
+#factionsearchname_svg{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#factionsearchname_text{
+    position: absolute;
+    width: 220px;
+    height: 33px;
+    left: 33px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    
+    color: rgb(255, 255, 255);
+    background: none;
+}
+
+input, textarea {
+    outline:none;
+    border: none;
+}
+
+.factionmenu_members_headlist{
+    position: absolute;
+    width: 200px;
+    height: 27px;
+    top: 70px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    
+    color: #A2A2A2;
+}
+
+#factionmenu_members_headlist_name{
+    left: 101px;
+}
+#factionmenu_members_headlist_rang{
+    left: 362px;
+}
+#factionmenu_members_headlist_lastentry{
+    left: 646px;
+}
+#factionmenu_members_headlist_manage{
+    left: 869px;
+}
+
+#factionmenu_members_list{
+    position: absolute;
+    left: 30px;
+    top: 106px;
+    height: 545px;
+    width: 1010px;
+    overflow-y: visible;
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+}
+
+#factionmenu_members_list::-webkit-scrollbar {
+    width: 13px;
+}
+ 
+#factionmenu_members_list::-webkit-scrollbar-track {
+    background: rgba(29, 29, 29, 0.37);
+    border-radius: 100px;
+}
+ 
+#factionmenu_members_list::-webkit-scrollbar-thumb {
+    background: linear-gradient(180.24deg, #B6B8BB 0.1%, #575858 112.67%);
+    border-radius: 100px;
+}
+.factionmenu_members_player{
+    width: 985px;
+    height: 70px;
+    display: flex;
+    
+    margin-top: 9px;
+}
+
+.factionmenu_members_player_main{
+    width: 833px;
+    height: 70px;
+    margin-right: 2px;
+    display: flex;
+
+    background: rgba(35, 45, 55, 0.8);
+    border-radius: 7px 0px 0px 7px;
+}
+
+.factionmenu_members_player_offline{
+    padding-left: 7px;
+    width: 59px;
+    height: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    color: rgba(161, 197, 231, 0.64);
+}
+
+.factionmenu_members_player_online{
+    padding-left: 7px;
+    width: 59px;
+    height: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    color: rgba(134, 255, 168, 0.64);
+}
+
+.factionmenu_members_player_nickname{
+    padding-left: 5px;
+    width: 258px;
+    height: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    color: rgb(255, 255, 255);
+}
+
+.factionmenu_members_player_rangnow{
+    padding-left: 0;
+    width: 275px;
+    height: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    color: rgba(161, 197, 231, 0.64);
+}
+
+.factionmenu_members_player_lastentry{
+    padding-left: 20px;
+    width: 213px;
+    height: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    color: rgba(161, 197, 231, 0.64);
+}
+
+.factionmenu_members_player_top{
+    width: 150px;
+    height: 34px;
+    margin-bottom: 2px;
+
+    background: rgba(35, 45, 55, 0.8);
+    border-radius: 0px 7px 0px 0px;
+}
+
+.factionmenu_members_player_bottom{
+    width: 150px;
+    height: 34px;
+    right: 12px;
+    top: 45px;
+
+    background: rgba(35, 45, 55, 0.8);
+    border-radius: 0px 0px 7px 0px;
+}
+
+.factionmenu_members_player_rang{
+    padding-left: 8px;
+    width: 100%;
+    height: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+}
+
+.factionmenu_members_player_uval{
+    padding-left: 8px;
+    width: 100%;
+    height: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    color: #FF7A7A;
+}
+
+.close_x{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+}
+
+#close_factionmenu{
+    right: 10px;
+    top: 8px;
+}
+
+/* М-меню*/
+
+#playermenu{
+    position: absolute;
+    width: 436px;
+    height: 563px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: radial-gradient(26% 48.05% at 100% 50.09%, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.playermenu_item{
+    width: 240px;
+    height: 31px;
+
+    padding-top: 7px;
+    padding-right: 12px;
+
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    align-items: center;
+    text-align: right;
+    
+
+    color: #FFFFFF;
+    background: rgba(40, 40, 40, 0.68);
+    border-radius: 5px;
+    margin-left: 110px;
+}
+
+/*Инвентарь*/
+
+#inventory{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1d1d1d9a;
+    overflow: hidden;
+    user-select: none;
+}
+
+#player_inv_clothes_box{
+    position: absolute;
+    height: 650px;
+    width: 400px;
+    left: 5%;
+    top: 52%;
+    transform: translateY(-50%);
+    overflow: visible;
+}
+
+#player_inv_clothes_box_human{
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    top: 20px;
+    transform: translateX(-50%);
+    height: 500px;
+    user-select: none;
+    pointer-events: none
+}
+
+#player_inv_clothes_cells{
+    position: absolute;
+    width: 76px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    overflow: visible;
+}
+
+#player_inv_clothes_cells2{
+    position: absolute;
+    width: 76px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    overflow: visible;
+}
+
+#player_inv_weapon_cells{
+    position: absolute;
+    width: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    bottom: 0;
+    left: 50.5%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    overflow: visible;
+}
+
+#inventory_item_menu{
+    width: 130px;
+    background-color: rgba(39, 48, 59, 0.829);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    padding-top: 7px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    overflow: visible;
+}
+
+.arrow_upss {
+    position: absolute;
+    width: 0; 
+    height: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    top: -10px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    
+    border-bottom: 10px solid rgba(39, 48, 59, 0.829);
+    overflow: visible;
+  }
+
+.inventory_item_menu_item{
+    user-select: none;
+    font-family: 'Khand', sans-serif;
+}
+
+#inventory_player_label_stroke{
+    margin-left: 205px;
+    width: 270px;
+    font-family: 'Khand', sans-serif;
+    font-weight: 600;
+    color: #AEAEAE;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#inventory_player_label{
+    color: white;
+    font-size: 22px;
+}
+
+#inventory_player_weight{
+    color: white;
+}
+
+#inventory_backpack_label_stroke{
+    margin-left: 307px;
+    width: 165px;
+    font-family: 'Khand', sans-serif;
+    font-weight: 600;
+    color: #AEAEAE;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#inventory_backpack_label{
+    color: white;
+    font-size: 22px;
+}
+
+#inventory_backpack_weight{
+    color: white;
+}
+
+#inventory_player{
+    width: 480px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#backpack_player{
+    width: 480px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#inventory_player_box{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -130px;
+    right: 5%;
+    overflow: visible;
+}
+
+#backpack_player_box{
+
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 190px;
+    display: none;
+    overflow: visible;
+}
+
+.inventory_player_item_adata{
+    display: none;
+}
+.inventory_player_cell{
+    width: 75px;
+    height: 90px;
+    background-color: rgba(52, 65, 83, .5);
+    border-radius: 6px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    user-select: none;
+    justify-content: center;
+}
+
+.inventory_player_item{
+    z-index: 100;
+    width: 75px;
+    height: 75px;
+    overflow: visible;
+}
+
+.inventory_player_item_img{
+    height: 43px;
+    margin-left: 16px;
+    margin-top: 5px;
+}
+
+.inventory_player_item_label{
+    width: 92%;
+    margin-top: -3px;
+    font-family: Montserrat;
+    display: flex;
+    line-height: 11px;
+    font-weight: 500;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.inventory_player_item_count{
+    width: 92%;
+    margin-left: 5px;
+    margin-top: 3px;
+    font-family: Montserrat;
+    display: flex;
+    line-height: 11px;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    color: white;
+}
+
+#rentVehWindow{
+    position: absolute;
+    width: 458px;
+    height: 215px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(28, 58, 99, 0.8);
+    border-radius: 5px;
+}
+
+
+#rentVehHeadLabel{
+    position: absolute;
+    display: flex;
+    width: 236px;
+    height: 22px;
+    top: 21px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
+}
+
+#rentVehHeadImg{
+    width: 22px;
+}
+
+#rentVehLabel{
+    width: 206px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+
+    color: #7590A9;
+}
+
+#rentVehText{
+    position: absolute;
+    width: 431px;
+    height: 36px;
+    top: 78px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+.greencl{
+    color: #62C334;
+}
+
+#rentVehAcceptButtons{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    bottom: 27px;
+
+    justify-content: space-around;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    
+    color: #FFFFFF;
+}
+
+#rentVehBtnYes, #rentVehBtnNo {
+    display: flex;
+    width: 167px;
+    height: 40px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#rentVehBtnYes{
+    background: linear-gradient(93.42deg, #398609 1.54%, #6CF700 100%);
+}
+
+#rentVehBtnNo{
+    background: linear-gradient(92.97deg, #FB1E00 0.62%, #DA4D4D 97.15%);
+}
+
+#talkNPC{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 56.77%, rgba(40, 39, 71, 0.75) 100%);
+}
+
+#talkNPC_btns{
+    position: absolute;
+    width: 784px;
+    height: 184px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    bottom: 49px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.talkNPC_btn{
+    width: 361px;
+    height: 80px;
+    background: rgba(55, 66, 81, 0.6);
+    border-radius: 5px;
+    margin-left: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: white;
+}
+
+#talkNPC_labelbox{
+    position: absolute;
+    bottom: 270px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    width: 790px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-direction: column;
+}
+
+#talkNPC_text{
+    font-weight: 600;
+}
+
+#routeSel{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(49, 49, 49);
+}
+
+
+#routeSel_label{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: white;
+}
+
+#routeSel_list{
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 255px;
+
+
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    overflow-y: visible;
+}
+
+#routeSel_list::-webkit-scrollbar {
+    width: 13px;
+}
+ 
+#routeSel_list::-webkit-scrollbar-track {
+    background: rgba(29, 29, 29, 0.37);
+    border-radius: 100px;
+}
+ 
+#routeSel_list::-webkit-scrollbar-thumb {
+    background: linear-gradient(180.24deg, #B6B8BB 0.1%, #575858 112.67%);
+    border-radius: 100px;
+}
+
+.routeSel_item{
+    min-height: 40px;
+    height: 40px;
+    max-width: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 10px;
+
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #272727;
+    color: white;
+    margin-bottom: 6px;
+}
+
+.routeSel_item_label, .routeSel_item_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.routeSel_item_label{
+    font-weight: 400;
+}
+
+#routeSel_closebtn{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 5px;
+}
+
+.routeSel_closebtn_cl{
+    top: 8px;
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    background-color: #afafaf;
+    transform: rotate(45deg);
+}
+
+
+#routeSel_closebtn_cl2{
+    transform: rotate(-45deg);
+}

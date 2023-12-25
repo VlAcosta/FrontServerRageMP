@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HUD | InnovationRP</title>
+</head>
+<body onload="foo()">
+    <img src="img/servclose_dev.png" id="entryservclose_dev">
+    <div id="hudall">
+        <img src="img/logo.svg" id="logo">
+        <div id="hudosn">
+            <img src="img/plcount.svg" id="plcountlogo">
+            <span id="plcountnum">none</span>
+
+            <img src="img/plid.svg" id="plidlogo">
+            <span id="plidnum">none</span>
+
+            <div id="moneybox">
+                <img src="img/money.svg" id="moneylogo">
+                <span id="moneycount">0</span>
+            </div>
+            <div id="greenzone_label">
+                <div id="greenzone_img_bckg">
+                    <img src="img/shield.svg" id="greenzone_img">
+                </div>
+                <span id="greenzone_text">Green Zone</span>
+            </div>
+            <div id="pos_micro">
+                <div id="player_pos_background">
+                    <img src="img/nav_icon.svg" id="player_pos_navimg">
+                    <div id="player_pos_text">
+                        <span id="player_pos_neighborhood">none</span>
+                        <span id="player_pos_place">none</span>
+                    </div>
+                </div>
+                <div id="micro_background">
+                    <img id="micro" src="img/micro.svg">
+                </div>
+            </div>
+
+            <div id="notify_cont"></div>
+            <div id="datesblock">
+                <img src="img/clock.svg" id="clock">
+                <span id="time">00:00</span>
+                <img src="img/calendar.svg" id="calendar">
+                <span id="date">00.00.0000</span>
+            </div>
+
+            <div id="speedometer">
+                <div class="speedstyle"><span id="speednul"></span><span class="osnspeed" id="speednum">0</span></div>
+                <span id="speedlabel">КМ/Ч</span>
+                <div id="rpmbox">
+                <div id='rpm'></div>
+                </div>
+                <div id="vehstatepanel">
+                    <div id="turns">
+                        <img id="turn-left" src="img/turn.svg" alt="alt">
+                        <img id="turn-right" src="img/turn.svg" alt="alt">
+                    </div>
+                    <img id="engine" src="img/engine.svg" alt="alt">
+                    <img id="door" src="img/door.svg" alt="alt">
+                    <img id="belt" src="img/belt.svg" alt="alt">
+                </div>
+                <div id="fuelbox">
+                    <img src="./img/fuel-pump.svg">
+                    <span id="fuelnum">100</span>&nbsp L
+                </div>
+
+                <div id="odometer">
+                    <span id="odometernul"></span>
+                    <span id="odometernum">{{ odometrnum }}</span>
+                    <span id="odometerlabel">КМ</span>
+                </div>
+            </div>
+        </div>
+        <div id="factionmenu">
+            <div id="factionmenu-list">
+                <span id="factionmenulist_label">МЕНЮ ФРАКЦИИ</span>
+                <span id="factionmenulist_line1"></span>
+
+                <span class="factionmenulist_clicked" id="factionmenulist_clicked_members"></span>
+                <span class="factionmenulist_clicked" id="factionmenulist_clicked_manage"></span>
+                <span class="factionmenulist_clicked" id="factionmenulist_clicked_settings"></span>
+
+                <span class="factionmenulist_selectedline" id="factionmenulist_selectedline_members"></span>
+                <span class="factionmenulist_button" id="factionmenulist_members">Участники</span>
+                <span class="factionmenulist_line" id="factionmenulist_line2"></span>
+                <span class="factionmenulist_selectedline" id="factionmenulist_selectedline_manage"></span>
+                <span class="factionmenulist_button" id="factionmenulist_manage">Управление</span>
+                <span class="factionmenulist_line" id="factionmenulist_line3"></span>
+                <span class="factionmenulist_selectedline" id="factionmenulist_selectedline_settings"></span>
+                <span class="factionmenulist_button" id="factionmenulist_settings">Настройки</span>
+            </div>
+            <div id="factionmenu-main">
+                <img src="img/close_x.svg" class="close_x" id="close_factionmenu">
+                <div class="factionmenu_tabs" id="factionmenu_members">
+                    <div id="factionmenu_members_searchbackground">
+                        <img src="img/search.svg" id="factionsearchname_svg">
+                        <input type="text" id="factionsearchname_text" placeholder="Поиск по имени..." onkeyup="factionmembersupdatesearch()">
+                    </div>
+                    
+                    <span class="factionmenu_members_headlist" id="factionmenu_members_headlist_name">ИМЯ</span>
+                    <span class="factionmenu_members_headlist" id="factionmenu_members_headlist_rang">РАНГ</span>
+                    <span class="factionmenu_members_headlist" id="factionmenu_members_headlist_lastentry">ПОСЛЕДНИЙ ВХОД</span>
+                    <span class="factionmenu_members_headlist" id="factionmenu_members_headlist_manage">УПРАВЛЕНИЕ</span>
+                    <div id="factionmenu_members_list">  
+                    </div>
+                </div>
+                <div class="factionmenu_tabs" id="factionmenu_manage">
+                    Manage
+                </div>
+                <div class="factionmenu_tabs" id="factionmenu_settings">
+                    Settings
+                </div>
+            </div> 
+        </div>
+        <div id="playermenu">
+            <span class="playermenu_item" id="playermenu_item_main">Меню Персонажа</span>
+            <span class="playermenu_item" id="playermenu_item_faction">Меню Фракции</span>
+        </div>
+        <div id="inventory">
+            
+            <div id="player_inv_clothes_box">
+                <img src="./img/peds.svg" id="player_inv_clothes_box_human">
+                <div id="player_inv_clothes_cells2">
+                    <span style="text-align: center;">Очки</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_glasses"></div>
+                    <span style="text-align: center;">Верхняя</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_upper"></div>
+                    <span style="text-align: center;">Перчатки</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_gloves"></div>
+                    <span style="text-align: center;">Браслеты</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_bracelets"></div>
+                    <span style="text-align: center;">Сумка</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_backpack"></div>
+                </div>
+                <div id="player_inv_clothes_cells">
+                    <span style="text-align: center;">Маска</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_mask"></div>
+                    <span style="text-align: center;">Шапка</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_head"></div>
+                    <span style="text-align: center;">Футболка</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_tshirt"></div>
+                    <span style="text-align: center;">Штаны</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_legs"></div>
+                    <span style="text-align: center;">Обувь</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_boots"></div>
+                </div>
+                <div id="player_inv_weapon_cells">
+                    <span style="text-align: center; position: absolute; top: -30px;">Оружие</span>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_mask"></div>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_mask"></div>
+                    <div class="inventory_player_cell" id="inventory_player_clothes_mask"></div>
+                </div>
+            </div>
+
+            <div id="inventory_player_box">
+                <span id="inventory_player_label_stroke"><span id="inventory_player_weight">0</span> &nbsp / &nbsp <span id="inventory_player_weight_max">0</span> &nbsp кг &nbsp &nbsp <span id="inventory_player_label">Ваш инвентарь</span></span>
+                <div id="inventory_player"></div>
+            </div>
+
+
+            <div id="backpack_player_box">
+                <span id="inventory_backpack_label_stroke"><span id="inventory_backpack_weight">0</span> &nbsp / &nbsp <span id="inventory_backpack_weight_max">0</span> &nbsp кг &nbsp &nbsp <span id="inventory_backpack_label">Сумка</span></span>
+                <div id="backpack_player"></div>
+            </div>
+        </div>
+        <div id="rentVehWindow">
+            <div id="rentVehHeadLabel">
+                <img src="./img/keys.svg" id="rentVehHeadImg">
+                <span id="rentVehLabel">АРЕНДА ТРАНСПОРТА</span>
+            </div>
+
+            <span id="rentVehText">Хотите арендовать автомобиль за <span id="rentVehMoney"></span> <span class="greencl">$</span><span id="rentVehTextAdd"></span></span>
+            
+            <div id="rentVehAcceptButtons">
+                <span id="rentVehBtnYes">Взять в аренду</span>
+                <span id="rentVehBtnNo">Отмена</span>
+            </div>
+        </div>
+        <div id="talkNPC">
+            <div id="talkNPC_labelbox">
+                <span id="talkNPC_name"></span>
+                <span id="talkNPC_text"></span>
+            </div>
+            
+            <div id="talkNPC_btns">
+                <span class="talkNPC_btn" id="talkNPC_btn_1"></span>
+                <span class="talkNPC_btn" id="talkNPC_btn_2"></span>
+                <span class="talkNPC_btn" id="talkNPC_btn_3"></span>
+                <span class="talkNPC_btn" id="talkNPC_btn_4"></span>
+            </div>
+        </div>
+        <div id="routeSel">
+            <span id="routeSel_label">Выбор маршрута</span>
+            <div id="routeSel_closebtn">
+                <span class="routeSel_closebtn_cl"></span>
+                <span class="routeSel_closebtn_cl" id="routeSel_closebtn_cl2"></span>
+            </div>
+            <div id="routeSel_list">
+            </div>
+        </div>
+        <div class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
+    </div>
+</body>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/script.js"></script>
+</html>

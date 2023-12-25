@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Auth | New York RP</title>
+</head>
+<body onload="foo()"> 
+    <div id="mainBlock">
+        <div id="choseTab">
+            <img src="img/up/log_on.svg" id="btn_log" class="" onclick="changeTabLog()">
+            <img src="img/up/reg_on.svg" id="btn_reg" style="margin-left: -10px;" onclick="changeTabReg()">
+            <img src="img/up/passw_on.svg" id="btn_pass" style="margin-left: -10px;" onclick="changeTabPass()">
+        </div>
+        <div id="regWindow">
+            <div class="labelWindowGroup">
+                <div class="labelWindowGroup_top">
+                    <img src="img/lines.svg">
+                    <span class="mainLabel">РЕГИСТРАЦИЯ</span>
+                    <img src="img/lines.svg" style="transform: rotate(180deg);">
+                </div>
+                <span class="secLabel" style="margin-left: 50%; margin-right: -50%; transform: translateX(-50%);">НОВОГО АККАУНТА</span>
+            </div>
+            <img src="img/lines_reg.svg" id="reg_lines">
+            <div class="inputBox">
+                <span class="inputBox_label">Логин</span>
+                <div class="inputbox_quad"></div>
+                <input type="text" class="inputBox_text" placeholder="Логин" id="reglogin">
+            </div>
+            <div class="inputBox">
+                <span class="inputBox_label">Пароль</span>
+                <div class="inputbox_quad"></div>
+                <input type="password" class="inputBox_text" placeholder="Пароль" id="regpass">
+            </div>
+            <div class="inputBox">
+                <span class="inputBox_label">Повторите пароль</span>
+                <div class="inputbox_quad"></div>
+                <input type="password" class="inputBox_text" placeholder="Повторите пароль" id="regrpass">
+            </div>
+            <div class="inputBox">
+                <span class="inputBox_label">Почта</span>
+                <div class="inputbox_quad"></div>
+                <input type="text" class="inputBox_text" placeholder="user@newyorkrp.com" id="regemail">
+            </div>
+            <div class="inputBox">
+                <span class="inputBox_label">Промокод</span>
+                <div class="inputbox_quad"></div>
+                <input type="text" class="inputBox_text" placeholder="#Promo" id="regpromo">
+            </div>
+            <div id="savePass">
+                <div id="savePass_box"></div>
+                <div id="savePass_text">
+                    <span id="savePass_header">Запомнить</span>
+                    <span id="savePass_sectext">Мой аккаунт в системе</span>
+                </div>
+            </div>
+            <div class="finalButton" id="signup_btn">Зарегистрироваться</div>
+        </div>
+        <div id="logWindow">
+            <div class="labelWindowGroup">
+                <div class="labelWindowGroup_top">
+                    <img src="img/lines.svg">
+                    <span class="mainLabel">АВТОРИЗАЦИЯ</span>
+                    <img src="img/lines.svg" style="transform: rotate(180deg);">
+                </div>
+                <span class="secLabel" style="margin-left: 50%; margin-right: -50%; transform: translateX(-50%);">ВАШЕГО АККАУНТА</span>
+            </div>
+            <img src="img/lines_log.svg" id="log_lines">
+            <div class="inputBox">
+                <span class="inputBox_label">Логин</span>
+                <div class="inputbox_quad"></div>
+                <input type="text" class="inputBox_text" placeholder="Логин" id="authlogin">
+            </div>
+            <div class="inputBox">
+                <span class="inputBox_label">Пароль</span>
+                <div class="inputbox_quad"></div>
+                <input type="password" class="inputBox_text" placeholder="Пароль" id="authpass">
+            </div>
+            <div class="finalButton" id="signin_btn">Авторизоваться</div>
+        </div>
+        <div id="passwWindow">
+            <div class="labelWindowGroup">
+                <div class="labelWindowGroup_top">
+                    <img src="img/lines.svg">
+                    <span class="mainLabel">ВОССТАНОВЛЕНИЕ</span>
+                    <img src="img/lines.svg" style="transform: rotate(180deg);">
+                </div>
+                <span class="secLabel" style="margin-left: 50%; margin-right: -50%; transform: translateX(-50%);">ВАШЕГО АККАУНТА</span>
+            </div>
+            <img src="img/lines_log.svg" id="passw_lines">
+            <div class="inputBox">
+                <span class="inputBox_label">Логин</span>
+                <div class="inputbox_quad"></div>
+                <input type="text" class="inputBox_text" placeholder="Логин">
+            </div>
+            <div class="inputBox">
+                <span class="inputBox_label">Пароль</span>
+                <div class="inputbox_quad"></div>
+                <input type="password" class="inputBox_text" placeholder="Пароль">
+            </div>
+            <div class="finalButton">Авторизоваться</div>
+        </div>
+        <div id="errorBlock" style="opacity: 0;">
+            <img src="img/error.svg" id="error_img">
+            <span id="error_header">Ошибка!</span>
+            <span id="error_text">Ваш логин уже занят, пожалуйста, придумайте другой логин.</span>
+        </div>
+    </div>
+</body>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/script.js"></script>
+</html>
